@@ -1,4 +1,7 @@
-<?php include('model/contact.model.php'); ?>
+<?php 
+include('model/contact.model.php');
 
-<?php include('view/contact.view.php'); ?>
+$layout_title= $title;
+
+include('view/contact.view.php');
 

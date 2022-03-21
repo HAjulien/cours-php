@@ -1,4 +1,7 @@
-<?php include('model/about.model.php'); ?>
+<?php 
+include('model/about.model.php');
 
-<?php include('view/about.view.php'); ?>
+$layout_title='Titre = ' . $title;
+
+include('view/about.view.php');
 
