@@ -1,4 +1,9 @@
 <?php
+
+    include('config/config.inc.php');
+
+    include('model/pdo.inc.php');
+
     $bg='assets/img/home-bg.jpg';
     $title='Blog de surf';
     $subtitle='Le meilleur sport de glisse';
