@@ -9,7 +9,7 @@ try{
     );
 
     $pdo = new PDO($dns, DB_USER, DB_PASSWORD, $options);
-    echo "connexion etablie!";
+    // echo "connexion etablie!";
 }catch (Exception $e) {
     die('Connexion impossible : ' . $e->getMEssage());
 }
