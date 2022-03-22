@@ -19,7 +19,7 @@
 
             <!-- Post preview-->
             <div class="post-preview">
-                <a href="post.php">
+                <a href="post.php?article=<?= $onedata["post_ID"] ?>">
                     <h2 class="post-title"><?= $onedata['post_title'] ?></h2>
                 </a>
                     <p class="post-subtitle">
@@ -28,7 +28,7 @@
                     </p>
                 <p class="post-meta">
                     Posted by
-                    <a href="#!"><?= $onedata["display_name"] ?></a>
+                    <a href="#"><?= $onedata["display_name"] ?></a>
                     <?= $onedata["post_date"] ?>
                     <br>
                     classé dans <b> <?= $onedata["cat_descr"] ?> </b>

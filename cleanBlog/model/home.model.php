@@ -8,7 +8,7 @@ try {
 
     $query="
     
-    SELECT cat_descr , LEFT(post_content ," . TRONCATURE . ") AS post_content ,post_title , display_name , post_date
+    SELECT post_ID, cat_descr , LEFT(post_content ," . TRONCATURE . ") AS post_content ,post_title , display_name , post_date
 
     FROM blog_posts
     
@@ -17,6 +17,8 @@ try {
 
     INNER JOIN blog_categories
     ON post_category = cat_id
+
+    ORDER BY post_date DESC
     ";
 
     // die ($query);

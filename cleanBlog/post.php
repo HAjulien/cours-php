@@ -5,7 +5,12 @@
 // echo($_GET['article']);
 // echo($_GET['article']);
 
-include('model/post1.model.php'); 
+//ce controller doit recevoir un parametre article
+if(!isset($_GET["article"])) {
+    die("Manque paramètre");
+};
+
+include('model/post.model.php'); 
 
 $layout_title='Titre = ' . $title; 
 
