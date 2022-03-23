@@ -22,10 +22,15 @@
                 <a href="post.php?article=<?= $onedata["post_ID"] ?>">
                     <h2 class="post-title"><?= $onedata['post_title'] ?></h2>
                 </a>
-                    <p class="post-subtitle">
-                        <?= $onedata["post_content"] ?>
-                   <!-- <?= substr($onedata["post_content"], 0 , 200) ?>-->  [...] 
-                    </p>
+                <img src=" <?= $onedata["post_img_url"] ?> " alt="" width="100%" >
+
+
+                <p class="post-subtitle">
+                    <?= $onedata["post_content"] ?>
+
+                <!-- <?= substr($onedata["post_content"], 0 , 200) ?>  [...]  -->
+                
+                </p>
                 <p class="post-meta">
                     Posted by
                     <a href="#"><?= $onedata["display_name"] ?></a>

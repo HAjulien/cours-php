@@ -1,6 +1,6 @@
 <?php 
 include('model/home.model.php');
 
-$layout_title='Bienvenu sur mon site';
+$layout_title='Titre = ' . $header_title;
 
 include('view/home.view.php');

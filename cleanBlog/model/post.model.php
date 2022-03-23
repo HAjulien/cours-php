@@ -57,7 +57,7 @@ try {
 
     $query="
     
-    SELECT  cat_descr , post_content , post_title , display_name , post_date
+    SELECT  cat_descr , post_content , post_title , post_img_url , display_name , post_date
 
     FROM blog_posts
     
@@ -80,7 +80,7 @@ try {
     //      echo"<br>" . $data["post_title"] . "<br>";
     // }
 
-    $data = $req->fetchAll();
+    $data = $req->fetch();
     // var_dump($data);
 
 } catch  (Exception $e) {

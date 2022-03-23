@@ -1,5 +1,5 @@
 <?php
     $bg='assets/img/about-bg.jpg';
-    $title='About Page';
-    $subtitle='A propos du surf';
+    $header_title='About Page';
+    $header_subtitle='A propos du surf';
 

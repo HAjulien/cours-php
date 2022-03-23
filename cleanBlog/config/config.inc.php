@@ -8,3 +8,4 @@ define("DB_CHARSET","utf8");
 
 
 define("TRONCATURE", 300);
+define("TRONCATURE_HEADER", 33);
