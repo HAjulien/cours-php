@@ -12,18 +12,7 @@ if (strlen($_POST["name"]) > 25 ) {
     die("Nom doit être inférieur à 26 caractères !");
 }
 
+include("model/contact.add.model.php");
 
-try {
-    //   var_dump($_POST);
-    $query=
-    "INSERT 
-    INTO blog_contacts
-    (contact_name, contact_email, contact_phone, contact_message)
-    VALUES
-    (" . addslashes($_POST["name"]) . ", " . $_POST["email"] . ", " . $_POST["phone"] . ", " . addslashes($_POST["message"]) .")";
-    die($query);
-
-} catch (Exception $e) {
-    die('Erreur MySQL : ' . $e->getMEssage());
-
-}
+header("Location: index.php?notif=1");
+exit;
