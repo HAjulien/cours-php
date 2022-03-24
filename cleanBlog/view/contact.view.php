@@ -16,25 +16,25 @@
                     <!-- To make this form functional, sign up at-->
                     <!-- https://startbootstrap.com/solution/contact-forms-->
                     <!-- to get an API token!-->
-                    <form id="contactForm" action="contact.add.php">
+                    <form id="contactForm" action="contact.add.php" method="post">
                         <div class="form-floating">
-                            <input class="form-control" id="name" name="name" type="text" placeholder="Entrez votre nom..." data-sb-validations="required" />
+                            <input class="form-control" id="name" name="name" type="text" placeholder="Entrez votre nom..." required  maxlength="24"/>
                             <label for="name">Nom</label>
                             <div class="invalid-feedback" data-sb-feedback="name:required">Nom obligatoire.</div>
                         </div>
                         <div class="form-floating">
-                            <input class="form-control" id="email" name="mail" type="email" placeholder="Entrez votre email..." data-sb-validations="required,email" />
+                            <input class="form-control" id="email" name="email" type="email" placeholder="Entrez votre email..." required />
                             <label for="email">Email</label>
                             <div class="invalid-feedback" data-sb-feedback="email:required">le email est obligatiore</div>
                             <div class="invalid-feedback" data-sb-feedback="email:email">Email est invalide.</div>
                         </div>
                         <div class="form-floating">
-                            <input class="form-control" id="phone" name="phone" type="tel" placeholder="Entrez votre numéro téléphone..." data-sb-validations="required" />
+                            <input class="form-control" id="phone" name="phone" type="tel" placeholder="Entrez votre numéro téléphone..." required pattern="(0|\+33)[1-9]( *[0-9]{2}){4}"/>
                             <label for="phone">Téléphone</label>
                             <div class="invalid-feedback" data-sb-feedback="phone:required">Téléphone obligatoire.</div>
                         </div>
                         <div class="form-floating">
-                            <textarea class="form-control" id="message" name="message" placeholder="Entrez votre message..." style="height: 12rem" data-sb-validations="required"></textarea>
+                            <textarea class="form-control" id="message" name="message" placeholder="Entrez votre message..." style="height: 12rem" required ></textarea>
                             <label for="message">Message</label>
                             <div class="invalid-feedback" data-sb-feedback="message:required">Le message est obligatiore.</div>
                         </div>
