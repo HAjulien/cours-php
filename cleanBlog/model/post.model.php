@@ -55,7 +55,38 @@ include('model/pdo.inc.php');
 
 try {
 
-    $query="
+    /* $query="
+    
+    SELECT  cat_descr , post_content , post_title , post_img_url , display_name , post_date
+
+    FROM blog_posts
+    
+    INNER JOIN blog_users
+    ON post_author = ID
+    
+    INNER JOIN blog_categories
+    ON post_category = cat_id
+    
+    WHERE post_ID = " . $_GET["article"]
+    ;  
+    
+    // die ($query);
+ 
+    $req = $pdo->query($query);
+    // var_dump($req);
+ 
+    // while ($data = $req->fetch()) {
+    //      var_dump ($data);
+    //      echo"<br>" . $data["post_title"] . "<br>";
+    // }
+ 
+    $data = $req->fetch();  */
+
+    // var_dump($data);
+
+
+
+    $query=" 
     
     SELECT  cat_descr , post_content , post_title , post_img_url , display_name , post_date
 
@@ -67,21 +98,21 @@ try {
     INNER JOIN blog_categories
     ON post_category = cat_id
     
-    WHERE post_ID = " . $_GET["article"]
-    ;
+    WHERE post_ID = :article";
 
-    // die ($query);
+    $curseur = $pdo->prepare($query);
 
-    $req = $pdo->query($query);
-    // var_dump($req);
+    $curseur->bindValue(':article', $_GET["article"], PDO::PARAM_INT);
 
-    // while ($data = $req->fetch()) {
-    //      var_dump ($data);
-    //      echo"<br>" . $data["post_title"] . "<br>";
-    // }
+    $curseur->execute();
 
-    $data = $req->fetch();
+    $curseur-> setFetchMode(PDO::FETCH_ASSOC);
+
+    $data = $curseur-> fetch();
+
     // var_dump($data);
+    // exit();
+
 
 } catch  (Exception $e) {
     die('Connexion impossible : ' . $e->getMEssage());
