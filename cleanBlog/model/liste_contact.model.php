@@ -22,6 +22,6 @@ try{
 
 
 
-$bg='assets/img/home-bg.jpg';
+$bg='https://www.informatique-mania.com/wp-content/uploads/2020/12/01-40.jpg';
 $header_title='Liste de contact';
 $header_subtitle='Notre liste de contact';

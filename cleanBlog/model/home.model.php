@@ -44,7 +44,7 @@ try {
 
 
 //variable ecrit en dur pour le titre index
-$bg='assets/img/home-bg.jpg';
+$bg='https://cdn.radiofrance.fr/s3/cruiser-production/2021/08/696b8bea-3893-4a18-b549-515a4c641d93/838_gettyimages-982747408.jpg';
 $header_title='Blog de surf';
 $header_subtitle='Le meilleur sport de glisse';
 
