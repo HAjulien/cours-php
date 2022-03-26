@@ -20,16 +20,15 @@
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="index.php">Mon site</a>
-
                 <?php if (isset($_GET["notif"])) { ?>
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-success " id="alert"  role="alert">
                     <?php if ($_GET["notif"] == 1) echo "Merci de nous avoir contacté !"; ?>
                     <?php if ($_GET["notif"] == 2) echo "Merci de nous êtes inscrit !"; ?>
                 </div>
                 <?php } ?>
                 
                 <?php if (isset($_GET["erreur"])) { ?>
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger" id="alert" role="alert">
                     <?php if ($_GET["erreur"] == 1) echo "Désolé votre demande de contact à échoué!"; ?>
                 </div>
                 <?php } ?>

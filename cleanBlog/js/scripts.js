@@ -27,3 +27,24 @@ window.addEventListener('DOMContentLoaded', () => {
         scrollPos = currentTop;
     });
 })
+
+// const myTimeout = setTimeout(notification, 2000)
+
+// function notification () {
+    
+//     document.getElementById("alert").style.opacity = "0"
+//     document.getElementById("alert").style.height = "0"
+//     document.getElementById("alert").style.width = "0"
+// }
+
+window.addEventListener('DOMContentLoaded', () => {
+    
+    setTimeout(notification, 2000)
+
+    function notification () {
+    document.getElementById("alert").style.opacity = "0"
+    document.getElementById("alert").style.height = "0"
+    document.getElementById("alert").style.width = "0"
+    }
+    
+})
